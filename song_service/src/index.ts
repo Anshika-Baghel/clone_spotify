@@ -15,7 +15,11 @@ export const redisClient=redis.createClient({
 
 redisClient.connect().then(()=>console.log("connected to redisclient")).catch((err)=>console.log(err))
 const app=express()
-app.use(cors())
+app.use(cors({
+    origin: 'https://spotify-clone-orcin-seven.vercel.app', // Allow requests from your frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow cookies and credentials
+}));
 const port=process.env.PORT || 5002
 app.use("/api/v1",songRoutes)
 

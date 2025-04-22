@@ -30,7 +30,11 @@ api_secret: process.env.CLOUD_SECRET_KEY,
 
 const port=process.env.PORT || 5001;
 const app = express();
-app.use(cors())
+app.use(cors({
+    origin: 'https://spotify-clone-orcin-seven.vercel.app', // Allow requests from your frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+    credentials: true, // Allow cookies and credentials
+}));
 async function initDB(){
     try {
         await sql`

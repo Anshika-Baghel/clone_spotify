@@ -7,7 +7,7 @@ import { useSongData } from '../context/SongContext';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { MdDelete } from 'react-icons/md';
-const server="hopeful-respect-production.up.railway.app"
+const server = process.env.REACT_APP_ADMIN_SERVICE_URL;
 const Admin = () => {
 
     const navigate = useNavigate();
