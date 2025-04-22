@@ -99,7 +99,7 @@ Redis is used to cache frequently accessed data, such as song and album details.
    - Admin Service: `http://localhost:5001`
    - Song Service: `http://localhost:5002`
 
-## Images to Add
+
 - **Architecture Diagram**:
 ![Architecture Diagram](frontend/public/img_20.PNG)
 
