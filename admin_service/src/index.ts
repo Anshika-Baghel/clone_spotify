@@ -69,6 +69,6 @@ initDB().then(()=>{
 })
 app.use(express.json())
 app.use("/api/v1",adminRoutes)
-app.listen(5001,()=>{
-    console.log(`Admin service is running on port${port} `);
+app.listen(port,()=>{
+    console.log(`Admin service is running on port ${port} `);
 })
