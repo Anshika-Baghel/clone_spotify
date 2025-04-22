@@ -208,7 +208,7 @@ Each service in this project uses specific environment variables for configurati
    - Admin Service: `http://localhost:5001`
    - Song Service: `http://localhost:5002`
 
-## Images to Add
+
 
 - **Architecture Diagram**:
   ![Architecture Diagram](frontend/public/img_20.PNG)
@@ -224,5 +224,8 @@ Each service in this project uses specific environment variables for configurati
   ![Home Page](frontend/public/img_1.PNG)
 
 ## Conclusion
+<<<<<<< HEAD
 
+=======
+>>>>>>> dc0426b8c96f9e6917f87333547caa7480cfff1f
 This Spotify Clone demonstrates the power of microservices architecture, modern frontend frameworks, and cloud deployment. It is scalable, efficient, and easy to maintain, making it a great example of a production-ready application.
