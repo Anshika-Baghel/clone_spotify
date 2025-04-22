@@ -9,6 +9,7 @@ export interface AuthenticatedRequest extends Request {
 export const isAuth = async (req: AuthenticatedRequest, res: Response, next: NextFunction): Promise<void> => {
     try {
         const authHeader = req.headers.authorization;
+        console.log('Authorization Header:', authHeader);
         if (!authHeader || !authHeader.startsWith('Bearer ')) {
             res.status(401).json({
                 message: 'Unauthorized: Missing or malformed token',
@@ -17,6 +18,7 @@ export const isAuth = async (req: AuthenticatedRequest, res: Response, next: Nex
         }
 
         const token = authHeader.split(' ')[1]; // Extract the token
+        console.log('Extracted Token:', token);
         if (!token) {
             res.status(401).json({
                 message: 'Unauthorized: Token is missing',
@@ -32,6 +34,7 @@ export const isAuth = async (req: AuthenticatedRequest, res: Response, next: Nex
             return;
         }
 
+        console.log('JWT_SECRET:', process.env.JWT_SECRET);
         const decoded = jwt.verify(token, process.env.JWT_SECRET) as JwtPayload;
         console.log('Decoded Token:', decoded);
 
