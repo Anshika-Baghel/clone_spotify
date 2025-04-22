@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+.env
+dist/
+build/
+.vscode/
+.DS_Store
+*.log
+
+# React build
+client/build/
+
+# OS & misc
+Thumbs.db
