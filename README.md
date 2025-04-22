@@ -2,6 +2,11 @@
 
 This project is a fully functional Spotify Clone built using a microservices architecture. It is designed to provide a seamless music streaming experience with features like user authentication, playlist management, and song/album browsing. The project is deployed on modern cloud platforms with auto-deployment enabled for both frontend and backend services.
 
+
+## Use The Application directly from this link
+   ```bash
+   https://spotify-clone-orcin-seven.vercel.app/
+   ```
 ## Project Overview
 
 ### Frontend
@@ -31,9 +36,6 @@ This project is a fully functional Spotify Clone built using a microservices arc
 - **Backend**: Each microservice is independently deployed on Railway.
 - **Auto-Deployment**: The project is configured for auto-deployment. Any commit and push to the GitHub repository triggers deployment for both frontend and backend services.
 
-## Architecture Diagram
-
-![Architecture Diagram](path/to/architecture-diagram.png)
 
 ## Redis for Performance
 Redis is used to cache frequently accessed data, such as song and album details. This reduces the load on the Neon PostgreSQL database and improves response times for the user.
