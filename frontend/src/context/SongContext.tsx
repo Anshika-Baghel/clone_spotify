@@ -2,7 +2,8 @@ import axios from 'axios';
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 
 
-const server = "http://localhost:5002";
+// const server = "http://localhost:5002";
+const server="https://lavish-kindness-production.up.railway.app"
 
 export interface Song {
     id: string;
