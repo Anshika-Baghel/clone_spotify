@@ -8,7 +8,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { MdDelete } from 'react-icons/md';
 // const server = process.env.REACT_APP_ADMIN_SERVICE_URL;
-const server  ="=https://hopeful-respect-production.up.railway.app"
+const server  ="https://hopeful-respect-production.up.railway.app"
 const Admin = () => {
 
     const navigate = useNavigate();
