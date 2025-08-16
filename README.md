@@ -2,11 +2,6 @@
 
 This project is a fully functional Spotify Clone built using a microservices architecture. It is designed to provide a seamless music streaming experience with features like user authentication, playlist management, and song/album browsing. The project is deployed on modern cloud platforms with auto-deployment enabled for both frontend and backend services.
 
-## Use The Application directly from this link
-
-```bash
-https://spotify-clone-orcin-seven.vercel.app/
-```
 
 ## Project Overview
 
@@ -125,7 +120,6 @@ Each service in this project uses specific environment variables for configurati
 - **Variables**:
   - `PORT`: Port number for the Admin Service (e.g., `5001`)
   - `DB_URL`: PostgreSQL connection string for album and song data (e.g., `postgresql://<username>:<password>@host/dbname`)
-  - `USER_URL`: URL of the User Service for authentication (e.g., `https://spotifyclone-production-ea6a.up.railway.app`)
   - `CLOUD_NAME`: Cloudinary cloud name for file uploads
   - `CLOUD_API_KEY`: Cloudinary API key
   - `CLOUD_SECRET_KEY`: Cloudinary secret key
@@ -161,8 +155,8 @@ Each service in this project uses specific environment variables for configurati
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/nik8839/Spotify_Clone.git
-   cd spotify-clone
+   git clone your_repo
+   cd folder_directory
    ```
 
 2. Install dependencies for each service:
@@ -223,6 +217,4 @@ Each service in this project uses specific environment variables for configurati
   ![AfterAdding Song](frontend/public/img_11.PNG)
   ![Home Page](frontend/public/img_1.PNG)
 
-## Conclusion
 
-This Spotify Clone demonstrates the power of microservices architecture, modern frontend frameworks, and cloud deployment. It is scalable, efficient, and easy to maintain, making it a great example of a production-ready application.
