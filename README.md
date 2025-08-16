@@ -27,13 +27,6 @@ This project is a fully functional Spotify Clone built using a microservices arc
   - **MongoDB**: Used for user data and playlist management.
   - **Neon PostgreSQL**: Used for storing song and album data.
 - **Caching**: Redis is used to cache frequently accessed data, improving performance and reducing database load.
-- **Deployment**: Railway
-
-### Deployment
-
-- **Frontend**: Deployed on Vercel for fast and reliable hosting.
-- **Backend**: Each microservice is independently deployed on Railway.
-- **Auto-Deployment**: The project is configured for auto-deployment. Any commit and push to the GitHub repository triggers deployment for both frontend and backend services.
 
 ## Redis for Performance
 
@@ -77,23 +70,6 @@ This project uses **Cloudinary** for uploading and managing images. Cloudinary i
 - **Performance**: Optimizes images for faster loading.
 - **Security**: Provides secure URLs for accessing images.
 
-### Cloudinary Integration Code:
-
-The integration is implemented in the `admin_service/src/controller.ts` file. Below is a snippet of the code:
-
-```typescript
-const cloud = await cloudinary.v2.uploader.upload(fileBuffer.content, {
-  folder: "albums",
-});
-
-const result = await sql`
-    INSERT INTO albums (title, description, thumbnail) 
-    VALUES (${title}, ${description}, ${cloud.secure_url})
- RETURNING *`;
-```
-
-For more details, refer to the `admin_service` codebase.
-
 ## Environment Variables
 
 Each service in this project uses specific environment variables for configuration. Below is a detailed list of the environment variables used in each service:
@@ -102,9 +78,9 @@ Each service in this project uses specific environment variables for configurati
 
 - **File**: `frontend/.env`
 - **Variables**:
-  - `REACT_APP_ADMIN_SERVICE_URL`: URL of the Admin Service (e.g., `https://hopeful-respect-production.up.railway.app`)
-  - `REACT_APP_USER_SERVICE_URL`: URL of the User Service (e.g., `https://spotifyclone-production-ea6a.up.railway.app`)
-  - `REACT_APP_SONG_SERVICE_URL`: URL of the Song Service (e.g., `https://lavish-kindness-production.up.railway.app`)
+  - `REACT_APP_ADMIN_SERVICE_URL`: URL of the Admin Service 
+  - `REACT_APP_USER_SERVICE_URL`: URL of the User Service 
+  - `REACT_APP_SONG_SERVICE_URL`: URL of the Song Service 
 
 ### 2. **User Service**
 
